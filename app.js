@@ -130,14 +130,6 @@ function showSliderFeedBacks() {
     itemsFeedbacks[itemActiveFeedbacks].classList.add('active');
     manualControlsFeedbacks[itemActiveFeedbacks].classList.add('active');
 
-    // Adicionar lógica de rolagem se necessário
-    let container = document.querySelector('.slider-feedbacks .list');
-    let itemActive = itemsFeedbacks[itemActiveFeedbacks];
-    let offsetLeft = itemActive.offsetLeft; // Posição do item ativo em relação ao container
-    let containerWidth = container.offsetWidth; // Largura do container da lista
-
-    // Ajustar scroll horizontal se necessário
-    container.scrollLeft = offsetLeft - (containerWidth / 2) + (itemActive.offsetWidth / 2);
 
     // Reiniciar o intervalo do slider
     clearInterval(refreshIntervalFeedbacks);

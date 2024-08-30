@@ -569,13 +569,44 @@ header .menu {
     justify-content: center;
 }
 
+.container-feedbacks .slider-feedbacks {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
 
+
+.container-feedbacks .slider-feedbacks h1 {
+    color: #000;
+    margin-bottom: 10px;
+    margin-left: 10%;
+}
+
+.container-feedbacks .slider-feedbacks .container-prev-filter {
+    display: flex;
+    align-items: center;
+    margin-left: 10%;
+}
+
+.container-feedbacks .slider-feedbacks .container-prev-filter .prev-filter {
+    width: 100px;
+    height: 1px;
+    background-color: #000;
+}
+
+.container-feedbacks .slider-feedbacks .container-prev-filter .prev-arrow {
+    color: #000;
+    font-weight: bold;
+}
 
 .container-feedbacks .slider-feedbacks .list {
     display: flex;
     gap: 10px;
     width: 100%;
-    height: 500px;
+    height: 600px;
     padding: 0 50px;
     align-items: center;
     box-sizing: border-box;
@@ -606,16 +637,6 @@ header .menu {
     width: 0;
 }
 
-.container-feedbacks .slider-feedbacks {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    position: relative;
-}
-
 .container-feedbacks .slider-feedbacks .list .item.active {
     opacity: 1;
     z-index: 10;
@@ -623,9 +644,6 @@ header .menu {
 
 .container-feedbacks .slider-feedbacks .list .item .content {
     position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
     z-index: 1;
     text-align: center;
 }
@@ -644,6 +662,7 @@ header .menu {
     padding: 10px;
     text-align: justify;
 }
+
 .slider-manual-feedbacks {
     display: flex;
     align-items: center;
@@ -653,6 +672,7 @@ header .menu {
     z-index: 100;
     bottom: 0;
 }
+
 .slider-manual-feedbacks ul {
     display: flex;
 }
@@ -672,17 +692,22 @@ header .menu {
 @media(max-width:475px) {
     .container-feedbacks .slider-feedbacks .list .item {
         width: 100%;
-        height: 100%;
+        height: 400px;
     }
 
     .container-feedbacks .slider-feedbacks .list .item .content .elementor {
-        width: 180px;
+        width: 190px;
         height: 150px;
         font-size: 12px;
         line-height: 20px;
     }
 }
-
+@media(max-width:325px) {
+    .container-feedbacks .slider-feedbacks .list .item {
+        width: 270px;
+        height: 350px;
+    }
+}
 .information {
     margin-top: 40px;
     width: 100%;
