@@ -104,7 +104,7 @@ function showSliderCarousel() {
 
 let itemsFeedbacks = document.querySelectorAll('.slider-feedbacks .list .item');
 let nextFeedbacks = document.getElementById('next-feedbacks');
-let manualControlsFeedbacks = document.querySelectorAll('.slider-manual-feedbacks ul li');
+let manualControlsFeedbacks = document.querySelectorAll('.slider-manual-feedbacks .btn');
 
 let countFeedbacks = itemsFeedbacks.length;
 let itemActiveFeedbacks = 0;
@@ -121,7 +121,7 @@ let refreshIntervalFeedbacks = setInterval(() => {
 function showSliderFeedBacks() {
     // Remover item ativo antigo
     let itemActiveOld = document.querySelector('.slider-feedbacks .list .item.active');
-    let manualControlActiveOld = document.querySelector('.slider-manual-feedbacks ul li.active');
+    let manualControlActiveOld = document.querySelector('.slider-manual-feedbacks .btn.active');
 
     if (itemActiveOld) itemActiveOld.classList.remove('active');
     if (manualControlActiveOld) manualControlActiveOld.classList.remove('active');
