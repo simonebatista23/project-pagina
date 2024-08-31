@@ -649,7 +649,9 @@ header .menu {
 .container-feedbacks .slider-feedbacks .list .item .content {
     position: absolute;
     z-index: 1;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .container-feedbacks .slider-feedbacks .list .item .content h2 {
@@ -708,7 +710,7 @@ header .menu {
     }
 
     .container-feedbacks .slider-feedbacks .list .item .content .elementor {
-        width: 200px;
+        width: 80%;
         height: 150px;
         font-size: 12px;
         line-height: 20px;
