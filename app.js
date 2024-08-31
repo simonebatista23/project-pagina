@@ -2,7 +2,7 @@ let items = document.querySelectorAll('.slider .list .item');
 let next = document.getElementById('next');
 let prev = document.getElementById('prev');
 let thumbnails = document.querySelectorAll('.thumbnail .item');
-let manualControls = document.querySelectorAll('.slider-manual ul li');
+let manualControls = document.querySelectorAll('.slider-manual .btn');
 
 // config param
 let countItem = items.length;
@@ -29,7 +29,7 @@ function showSlider() {
     // remove item active old
     let itemActiveOld = document.querySelector('.slider .list .item.active');
     let thumbnailActiveOld = document.querySelector('.thumbnail .item.active');
-    let manualControlActiveOld = document.querySelector('.slider-manual ul li.active');
+    let manualControlActiveOld = document.querySelector('.slider-manual .btn.active');
 
     if (itemActiveOld) itemActiveOld.classList.remove('active');
     if (thumbnailActiveOld) thumbnailActiveOld.classList.remove('active');

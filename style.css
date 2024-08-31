@@ -537,26 +537,30 @@ header .menu {
     }
 }
 
+
 .slider-manual {
     display: flex;
-    align-items: center;
     justify-content: center;
-    width: 100%;
+    gap: 20px;
     position: absolute;
+    bottom: 10px;
+    width: 100%;
     z-index: 100;
-    bottom: 0;
 }
 
-.slider-manual ul {
-    display: flex;
+.slider-manual .btn {
+    background-color: #ffffff;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;
+    border-color: #ffffff;
+    z-index: 100;
 }
 
-.slider-manual ul li {
-    margin: 20px;
-}
-
-.slider-manual ul li.active {
-    color: aqua;
+.slider-manual .btn.active {
+    background-color: #175db3;
 }
 
 /* FEEDBACKS*/
@@ -565,7 +569,7 @@ header .menu {
     height: 100%;
     display: flex;
     width: 100%;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
 }
 
@@ -573,31 +577,31 @@ header .menu {
     height: 100%;
     width: 100%;
     display: flex;
+    align-items: center;
     justify-content: center;
     flex-direction: column;
     position: relative;
 }
 
-
-.container-feedbacks .slider-feedbacks h1 {
+.container-feedbacks h1 {
     color: #000;
     margin-bottom: 10px;
     margin-left: 10%;
 }
 
-.container-feedbacks .slider-feedbacks .container-prev-filter {
+.container-feedbacks .container-prev-filter {
     display: flex;
     align-items: center;
     margin-left: 10%;
 }
 
-.container-feedbacks .slider-feedbacks .container-prev-filter .prev-filter {
+.container-feedbacks .container-prev-filter .prev-filter {
     width: 100px;
     height: 1px;
     background-color: #000;
 }
 
-.container-feedbacks .slider-feedbacks .container-prev-filter .prev-arrow {
+.container-feedbacks .container-prev-filter .prev-arrow {
     color: #000;
     font-weight: bold;
 }
@@ -664,46 +668,60 @@ header .menu {
 }
 
 .slider-manual-feedbacks {
-	display: flex;
-	justify-content: center;
-	gap: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
-.slider-manual-feedbacks .btn{
+.slider-manual-feedbacks .btn {
     background-color: #000;
-	width: 15px;
-	height: 15px;
-	border-radius: 50%;
-	border: 2px solid transparent;
-	cursor: pointer;
-	border-color: #ffffff;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;
+    border-color: #ffffff;
     z-index: 100;
 }
 
-.slider-manual-feedbacks .btn.active{
-    background-color: #1d8346;
+.slider-manual-feedbacks .btn.active {
+    background-color: #175db3;
 }
 
+@media(max-width:1200px) {
+    .container-feedbacks .slider-feedbacks .list {
+        justify-content: center;
+    }
+
+    .container-feedbacks .slider-feedbacks .list .item {
+        position: absolute;
+        overflow: hidden;
+        opacity: 1;
+        transition: 3s all ease-in-out;
+    }
+}
 
 @media(max-width:475px) {
     .container-feedbacks .slider-feedbacks .list .item {
-        width: 100%;
+        width: 90%;
         height: 400px;
     }
 
     .container-feedbacks .slider-feedbacks .list .item .content .elementor {
-        width: 190px;
+        width: 200px;
         height: 150px;
         font-size: 12px;
         line-height: 20px;
     }
 }
+
 @media(max-width:325px) {
     .container-feedbacks .slider-feedbacks .list .item {
         width: 270px;
         height: 350px;
     }
 }
+
 .information {
     margin-top: 40px;
     width: 100%;
